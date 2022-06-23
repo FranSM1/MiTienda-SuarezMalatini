@@ -1,10 +1,12 @@
-import './Card.css'
+ import './Card.css';
 
-function Card() {
+function Card({producto},{precio}) {
   return (
-    <header className = "card ">
-      Hola
-    </header>
+  <div className = "Card">
+    <h4>{producto}</h4>
+    <p>{precio}</p>
+  </div>
+
   );
 }
 

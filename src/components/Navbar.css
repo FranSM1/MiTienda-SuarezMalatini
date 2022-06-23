@@ -20,9 +20,10 @@ position: relative;
  display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content:flex-start;
-  margin: 30px;
-  padding: 5px;
+  justify-content:center;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
   margin-bottom: 50px;
   border-style: none;
   background-color:#fec601;
@@ -33,7 +34,7 @@ position: relative;
 .nav-bar li {
   display: flex;
   flex-direction: row;
-  align-items:flex-end;
+  align-items:center;
   justify-content:center;
   margin: 30px;
   padding: 20px;
@@ -44,4 +45,23 @@ position: relative;
 }
 .nav-bar li:hover{
   background-color: white;
+}
+.iconify {
+  font-size: 3rem;
+}
+button {
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f7cf3e;
+  padding: 5px 25px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+button:hover {
+  background-color: #fec601;;
+  transition: ease 0.5s;
 }
