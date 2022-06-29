@@ -1,0 +1,52 @@
+[
+  {
+    "stock": 5,
+    "id": 1,
+    "nombre": "malla1",
+    "tipo": "indumentaria",
+    "desc": "Para uso recreativo",
+    "precio": 1200,
+    "talle": "L",
+    "img": " "
+  },
+  {
+    "stock": 5,
+    "id": 1,
+    "nombre": "malla2",
+    "tipo": "indumentaria",
+    "desc": "Para uso recreativo",
+    "precio": 1200,
+    "talle": "L",
+    "img": " "
+  },
+  {
+    "stock": 5,
+    "id": 1,
+    "nombre": "malla3",
+    "tipo": "indumentaria",
+    "desc": "Para uso recreativo",
+    "precio": 1200,
+    "talle": "L",
+    "img": " "
+  },
+  {
+    "stock": 5,
+    "id": 1,
+    "nombre": "malla1",
+    "tipo": "indumentaria",
+    "desc": "Para uso recreativo",
+    "precio": 1200,
+    "talle": "L",
+    "img": " "
+  },
+  {
+    "stock": 5,
+    "id": 1,
+    "nombre": "malla1",
+    "tipo": "indumentaria",
+    "desc": "Para uso recreativo",
+    "precio": 1200,
+    "talle": "L",
+    "img": " "
+  }
+]
