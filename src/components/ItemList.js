@@ -15,11 +15,10 @@ function ItemList() {
   ,[])
   return (
     <header className = "card ">
-    {info && info.map(i => <Item producto={i.nombre} precio={i.precio}/>)} 
+    {info && info.map(i => <Item producto={i.nombre} precio={i.precio} />)} 
     </header>
   );// && es un if que nos dice que si es true(cuando tiene algo adentro) ejecute el metodo
 }
   
   export default ItemList;
 
- 

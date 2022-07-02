@@ -1,4 +1,4 @@
-import Cantidad from './Cantidad';
+import ItemCount from './ItemCount';
 import './Item.css';
 
 function Item({producto},{precio}) {
@@ -6,7 +6,7 @@ function Item({producto},{precio}) {
   <div className = "Card">
     <h4>{producto}</h4>
     <p>{precio}</p>
-    <Cantidad/>
+    <ItemCount stock = {6} initial = {1} />
    <button>Ver descripción</button>
   </div>
 
