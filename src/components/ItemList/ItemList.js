@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import Item from './Item';
+import Item from '../Item/Item';
+import '../ItemListContainer/ItemListContainer.css';
 
 
 function ItemList() {
@@ -7,7 +8,7 @@ function ItemList() {
   
   useEffect(()=>{
     setTimeout(() => 
-    fetch('articulos.json')
+    fetch('../articulos.json')
     .then((resp)=> resp.json()) // respuesta del fetch
     .then((art)=> setInfo(art)
     ),3000

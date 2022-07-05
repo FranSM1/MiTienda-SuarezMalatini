@@ -1,5 +1,5 @@
 
-    import './Navbar.css';
+    import '../NavBar/Navbar.css';
 
 function CartWidget() {
   return (
