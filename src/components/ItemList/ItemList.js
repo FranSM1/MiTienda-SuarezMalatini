@@ -1,25 +1,17 @@
-import { useEffect, useState } from 'react';
 import Item from '../Item/Item';
-import '../ItemListContainer/ItemListContainer.css';
+import '../ItemListContainer/ItemListContainer.css'
 
+function ItemList (props) {
 
-function ItemList() {
-  const [info , setInfo] = useState([])
-  
-  useEffect(()=>{
-    setTimeout(() => 
-    fetch('../articulos.json')
-    .then((resp)=> resp.json()) // respuesta del fetch
-    .then((art)=> setInfo(art)
-    ),3000
-    );} // lo que sale del .then anterior
-  ,[])
-  return (
-    <header className = "card ">
-    {info && info.map(i => <Item producto={i.nombre} precio={i.precio} />)} 
-    </header>
-  );// && es un if que nos dice que si es true(cuando tiene algo adentro) ejecute el metodo
+  return(
+    <div>
+      {
+                    props.productos.map(
+                        i => <Item key={i.id} id={i.id} nombre={i.nombre} precio={i.precio}  imagen={i.img}/>
+                    )
+                }
+    </div>
+ ) ;
 }
-  
-  export default ItemList;
+export default ItemList;
 

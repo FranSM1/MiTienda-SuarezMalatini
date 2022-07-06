@@ -1,23 +1,17 @@
 import './ItemDetail.css';
-import Item from '../Item/Item';
-import React from 'react';
-
-function ItemDetail(props) { 
-
-
+import ItemCount from '../ItemCount/ItemCount';
+function ItemDetail({producto}) {
   return (
-    <div>
-      {props.producto.map((item)=>(
-        <Item 
-       nombre= {item.nombre}
-       key= {item.id}
-       precio= {item.precio}
-       descripcion= {item.descripcion}
-        />
-      ))}
-    </div>
-  );
+     <div>
+            Informacion del producto
+            <img src={producto.imagen} alt={producto.nombre} width="400" />
+            <h1>{producto.titulo}</h1>
+            <h2>{producto.descripcion}</h2>
+            <h3>$ {producto.precio}</h3>
+            <h4>Stock: {producto.stock}</h4>
+            <ItemCount stock={producto.stock} initial={1} />
+        </div>
+    )
 }
 
 export default ItemDetail;
-

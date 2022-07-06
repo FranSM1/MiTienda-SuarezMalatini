@@ -1,39 +1,23 @@
 import './ItemDetailContainer.css';
-import {  useState } from 'react';
-
 import ItemDetail from '../ItemDetail/ItemDetail';
-//import { useParams } from 'react-router-dom';
-
+import { useEffect, useState } from 'react';
 function ItemDetailContainer() {
-  const [ producto, setProducto ] = useState([])
-  //const params = useParams();
+
+  const [info , setInfo] = useState({})
   
-
- const fetchProducto =() => {
-  fetch('../articulos.json')
-  .then((response) =>{return response.json()})
-  .then ((data) => {
-    const productoFetch = data.map((articulo)=> {
-      return {
-        id : articulo.id,
-        nombre : articulo.nombre,
-        precio : articulo.precio,
-        descripcion : articulo.desc,
-        imagen : articulo.img,
-      }
-      })
-      setProducto(productoFetch)})
-
-    }
+  useEffect(()=>{
+    setTimeout(() => 
+    fetch('./articulos.json')
+    .then((resp)=> resp.json())
+    .then((prod)=> setInfo(prod[0])
+    ),3000
+    );} ,[])
 
   return (
     <div>
-      <button onClick = {fetchProducto}> Ver Detalles
-      </button>
-      <ItemDetail producto = {producto}/>
+    <ItemDetail producto={info} /> 
     </div>
-  )
+  );
 }
-
-
-export default ItemDetailContainer;
+  
+  export default ItemDetailContainer;

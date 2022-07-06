@@ -1,12 +1,9 @@
 
 import './Body.css'
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
-import ItemListContainer from '../ItemListContainer/ItemListContainer';
-import {useParams} from 'react-router-dom'
+import Item from '../Item/Item';
 
 function Body() {
-const param = useParams
-console.log(param)
+
 
   return (
     <section className = "cuerpo">
@@ -16,8 +13,8 @@ console.log(param)
         
       </div>
       <div>
-        <ItemListContainer/>
-        <ItemDetailContainer/>
+        <Item/>
+      
       </div>
       <div className = "medios-de-pago">
         <h4>Medios de pago</h4>
