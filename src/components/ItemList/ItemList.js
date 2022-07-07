@@ -4,7 +4,7 @@ import '../ItemListContainer/ItemListContainer.css'
 function ItemList (props) {
 
   return(
-    <div>
+    <div className='card'>
       {
                     props.productos.map(
                         i => <Item key={i.id} id={i.id} nombre={i.nombre} precio={i.precio}  imagen={i.img}/>

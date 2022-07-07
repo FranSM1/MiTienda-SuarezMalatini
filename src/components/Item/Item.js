@@ -1,6 +1,6 @@
 import ItemCount from '../ItemCount/ItemCount'
 import './Item.css';
-
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer"
 function Item(props) {
   return (
 <div className = "Card">
@@ -8,10 +8,10 @@ function Item(props) {
   <p>{props.precio}</p>
   <img src={props.imagen} alt="" />
   <ItemCount stock = {6} initial = {1} />
-  <button>Ver descripción</button>
+ <ItemDetailContainer/>
 </div>
 
   );
-}
+  }
 
 export default Item;
