@@ -1,6 +1,7 @@
 import ItemCount from '../ItemCount/ItemCount'
 import './Item.css';
-import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer"
+import { Link } from "react-router-dom";
+
 function Item(props) {
   const onAdd = (cantidad) => {
     alert("agregaste" + cantidad + "items de este articulo")
@@ -11,7 +12,9 @@ function Item(props) {
   <p>{props.precio}</p>
   <img src={props.imagen} alt="" />
   <ItemCount stock = {6} initial = {1}  onAdd={onAdd}/>
- <ItemDetailContainer/>
+  <button>
+  <Link to={`/item${props.id}`}>Ver detalle del producto</Link>
+  </button>
 </div>
 
   );

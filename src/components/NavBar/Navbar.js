@@ -1,15 +1,15 @@
 import CartWidget from '../CartWidget/CartWidget';
 import './Navbar.css';
-
+import { NavLink } from 'react-router-dom'
 function Navbar() {
   return (
   <header  >
      <h1 className = " titulo-page">Lolo <span>Deportes</span></h1>
      <div className="nav-bar">
       <input type="image" img src={process.env.PUBLIC_URL + '/lolo.jpg'} alt="logo" width="90"/>
-    <li><a href="/tienda">Tienda</a></li>
-    <li><a href="/nosotros">Nosostros</a></li>
-    <li><a href="/contactos">Contactos</a></li> 
+    <li>< NavLink activeClassName='active' to="/tienda">Tienda</NavLink></li>
+    <li><NavLink activeClassName='active' to="/nosotros">Nosostros</NavLink></li>
+    <li><NavLink activeClassName='active' to="/contactos">Contactos</NavLink></li> 
     <CartWidget/>
     </div>
   </header>

@@ -1,21 +1,26 @@
 import './ItemDetailContainer.css';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 function ItemDetailContainer() {
+const [info, setInfo] = useState([]);
+  const { idItems } = useParams();
 
-  const [info , setInfo] = useState({})
-  
-  useEffect(()=>{
-    setTimeout(() => 
-    fetch('./articulos.json')
-    .then((resp)=> resp.json())
-    .then((prod)=> setInfo(prod[0])
-    ),3000
-    );} ,[])
-
+  useEffect(() => {
+    setTimeout(
+      () =>
+        fetch("./articulos.json")
+          .then((resp) => resp.json())
+          .then((prod) => {
+            setInfo(prod);
+            console.log(prod);
+          }),
+      2000
+    );
+  }, [idItems, info]);
   return (
-    <div>
-    <ItemDetail producto={info} /> 
+      <div>
+      <ItemDetail producto={info} />
     </div>
   );
 }
